@@ -1,11 +1,11 @@
 import React from "react";
 
-function App() {
+function Form() {
   return (
     <div>
-      <p>CV Application</p>
+      <p>Here be form</p>
     </div>
   );
 }
 
-export default App;
+export default Form;
