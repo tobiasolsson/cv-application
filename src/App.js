@@ -3,22 +3,42 @@ import Form from './components/editSection/form/Form';
 import Cv from './components/displaySection/cv/Cv';
 
 function App() {
-  const [resume, setResume] = useState({
-    // General info
+  const [general, setGeneral] = useState({
     firstName: '',
     lastName: '',
     title: '',
     email: '',
     phone: '',
     desc: '',
-    // Work XP
-    // Education
   });
+  const [work, setWork] = useState([
+    {
+      yearStart: 0,
+      yearEnd: 0,
+      company: '',
+      desc: '',
+      title: '',
+    },
+  ]);
+  const [education, setEducation] = useState([
+    {
+      yearStart: 0,
+      yearEnd: 0,
+      school: '',
+      desc: '',
+      title: '',
+    },
+  ]);
+
   return (
     <div>
       <p>CV Application</p>
-      <Form setResume={setResume} />
-      <Cv resume={resume} />
+      <Form
+        setGeneral={setGeneral}
+        setWork={setWork}
+        setEducation={setEducation}
+      />
+      <Cv general={general} work={work} education={education} />
     </div>
   );
 }

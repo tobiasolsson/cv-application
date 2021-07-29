@@ -3,7 +3,7 @@ import React from 'react';
 function General(props) {
   const handleChange = (e) => {
     const { name, value } = e.target;
-    props.setResume((prev) => ({ ...prev, [name]: value }));
+    props.setGeneral((prev) => ({ ...prev, [name]: value }));
   };
   return (
     <form>

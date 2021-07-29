@@ -4,7 +4,7 @@ function Cv(props) {
   return (
     <div>
       <p>Here be preview</p>
-      <p>{props.resume.email}</p>
+      <p>{props.general.email}</p>
     </div>
   );
 }

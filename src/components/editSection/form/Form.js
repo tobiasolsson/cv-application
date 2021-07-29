@@ -1,11 +1,16 @@
 import React from 'react';
 import General from '../generalInfo/General';
+import Work from '../work/Work';
+import Education from '../education/Education';
 
 function Form(props) {
+  const { setGeneral, setWork, setEducation } = props;
   return (
     <div>
       <p>Here be form</p>
-      <General setResume={props.setResume} />
+      <General setGeneral={setGeneral} />
+      <Work setWork={setWork} />
+      <Education setEducation={setEducation} />
     </div>
   );
 }
