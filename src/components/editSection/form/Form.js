@@ -4,13 +4,23 @@ import Work from '../work/Work';
 import Education from '../education/Education';
 
 function Form(props) {
-  const { setGeneral, setWork, setEducation } = props;
+  const { setGeneral, setWork, education, setEducation } = props;
+
+  const e = education.map((item) => (
+    // console.log(item);
+    <Education
+      setEducation={setEducation}
+      school={item}
+      education={education}
+    />
+  ));
+
   return (
     <div>
       <p>Here be form</p>
       <General setGeneral={setGeneral} />
       <Work setWork={setWork} />
-      <Education setEducation={setEducation} />
+      {e}
     </div>
   );
 }
