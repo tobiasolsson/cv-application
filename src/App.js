@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import uniqid from 'uniqid';
 import Form from './components/editSection/form/Form';
 import Cv from './components/displaySection/cv/Cv';
 
-// använd uniqeid lib som förra projektet
-// scrappa schools, med uniqe id editera skola och jobb.
+// TODO: Minimera boilerplate för setEducation
+// TODO: Varför är Cv 1 tecken bakom state? useEffect? Fel i Education.js?
+// TODO: När Ovasn är klart, fixa CSS
 
 function App() {
   const [general, setGeneral] = useState({
@@ -29,7 +31,7 @@ function App() {
       yearStart: 0,
       yearEnd: 0,
       desc: '',
-      id: 'init',
+      id: uniqid(),
     },
   ]);
 

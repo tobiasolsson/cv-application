@@ -4,16 +4,22 @@ import uniqid from 'uniqid';
 function Education(props) {
   const { setEducation, education, school } = props;
 
-  const [currentSchool, setCurrentSchool] = useState({ id: uniqid() });
+  const [currentSchool, setCurrentSchool] = useState({
+    school: '',
+    title: '',
+    yearStart: 0,
+    yearEnd: 0,
+    desc: '',
+    id: uniqid(),
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCurrentSchool((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setEducation((prev) => [...prev, currentSchool]);
+    const updatedEducationList = education.filter(
+      (item) => school.id !== item.id,
+    );
+    setEducation([...updatedEducationList, currentSchool]);
   };
 
   const handleDelete = () => {
@@ -24,7 +30,7 @@ function Education(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label>
         Skola:
         <input type="text" name="school" onChange={handleChange} />
@@ -45,7 +51,6 @@ function Education(props) {
         Beskrivning:
         <input type="text" name="desc" onChange={handleChange} />
       </label>
-      <button type="submit">Add</button>
       <button type="button" onClick={handleDelete}>
         Remove
       </button>
