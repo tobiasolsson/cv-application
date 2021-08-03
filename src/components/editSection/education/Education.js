@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
-import uniqid from 'uniqid';
+import React, { useState, useEffect } from 'react';
+
+import { schoolObj } from '../../../boiler';
 
 function Education(props) {
   const { setEducation, education, school } = props;
 
-  const [currentSchool, setCurrentSchool] = useState({
-    school: '',
-    title: '',
-    yearStart: 0,
-    yearEnd: 0,
-    desc: '',
-    id: uniqid(),
-  });
+  const [currentSchool, setCurrentSchool] = useState(schoolObj);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCurrentSchool((prev) => ({ ...prev, [name]: value }));
+  // Update education state, so that it's immediate and not one step behind
+  useEffect(() => {
     const updatedEducationList = education.filter(
       (item) => school.id !== item.id,
     );
     setEducation([...updatedEducationList, currentSchool]);
+  }, [currentSchool]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentSchool((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleDelete = () => {

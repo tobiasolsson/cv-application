@@ -1,39 +1,14 @@
 import React, { useState } from 'react';
-import uniqid from 'uniqid';
 import Form from './components/editSection/form/Form';
 import Cv from './components/displaySection/cv/Cv';
+import { schoolObj, workObj, generalObj } from './boiler';
 
-// TODO: Minimera boilerplate för setEducation
-// TODO: Varför är Cv 1 tecken bakom state? useEffect? Fel i Education.js?
 // TODO: När Ovasn är klart, fixa CSS
 
 function App() {
-  const [general, setGeneral] = useState({
-    firstName: '',
-    lastName: '',
-    title: '',
-    email: '',
-    phone: '',
-    desc: '',
-  });
-  const [work, setWork] = useState({
-    yearStart: 0,
-    yearEnd: 0,
-    company: '',
-    desc: '',
-    title: '',
-  });
-  // const [workHistory, setworkHistory] = useState([]);
-  const [education, setEducation] = useState([
-    {
-      school: '',
-      title: '',
-      yearStart: 0,
-      yearEnd: 0,
-      desc: '',
-      id: uniqid(),
-    },
-  ]);
+  const [general, setGeneral] = useState(generalObj);
+  const [work, setWork] = useState(workObj);
+  const [education, setEducation] = useState([schoolObj]);
 
   return (
     <div>
