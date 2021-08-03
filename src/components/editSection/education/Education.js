@@ -21,11 +21,12 @@ function Education(props) {
   };
 
   const handleDelete = () => {
-    console.log(education.length);
-    const updatedEducationList = education.filter(
-      (item) => school.id !== item.id,
-    );
-    setEducation(updatedEducationList);
+    if (education.length > 1) {
+      const updatedEducationList = education.filter(
+        (item) => school.id !== item.id,
+      );
+      setEducation(updatedEducationList);
+    }
   };
 
   return (
