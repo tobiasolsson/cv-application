@@ -4,6 +4,8 @@ import Work from '../work/Work';
 import Education from '../education/Education';
 import { schoolObj } from '../../../boiler';
 
+import styles from './Form.module.css';
+
 function Form(props) {
   const { setGeneral, setWork, education, setEducation } = props;
 
@@ -27,7 +29,8 @@ function Form(props) {
       <h2>Fill in your resume here:</h2>
       <General setGeneral={setGeneral} />
       <Work setWork={setWork} />
-      <div>
+      <div className={styles.education}>
+        <h3>Utbildning:</h3>
         {ed}
         <button type="submit" onClick={handleAdd}>
           Add

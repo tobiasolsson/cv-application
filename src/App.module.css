@@ -1,0 +1,17 @@
+.main {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #80acba;
+  border-radius: 14px;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #f2f5ee;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

@@ -1,0 +1,14 @@
+.input {
+  width: 80%;
+  margin: 3px auto;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 0;
+}
+.main {
+  background-color: pink;
+
+  display: flex;
+  flex-direction: column;
+}

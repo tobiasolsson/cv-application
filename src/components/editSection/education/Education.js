@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from '../Edit.module.css';
 
 function Education(props) {
   const { setEducation, education, school } = props;
@@ -29,27 +30,42 @@ function Education(props) {
   };
 
   return (
-    <form>
-      <label>
-        Skola:
-        <input type="text" name="school" onChange={handleChange} />
-      </label>
-      <label>
-        Titel:
-        <input type="text" name="title" onChange={handleChange} />
-      </label>
-      <label>
-        Från:
-        <input type="text" name="yearStart" onChange={handleChange} />
-      </label>
-      <label>
-        Till:
-        <input type="text" name="yearEnd" onChange={handleChange} />
-      </label>
-      <label>
-        Beskrivning:
-        <input type="text" name="desc" onChange={handleChange} />
-      </label>
+    <form className={styles.main}>
+      <input
+        type="text"
+        name="school"
+        placeholder="Skola"
+        className={styles.input}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="title"
+        placeholder="Program"
+        className={styles.input}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="yearStart"
+        placeholder="Från"
+        className={styles.input}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="yearEnd"
+        placeholder="Till"
+        className={styles.input}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="desc"
+        placeholder="Beskrivning"
+        className={styles.input}
+        onChange={handleChange}
+      />
       <button type="button" onClick={handleDelete}>
         Remove
       </button>
