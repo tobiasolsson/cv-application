@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { schoolObj } from '../../../boiler';
-
 function Education(props) {
   const { setEducation, education, school } = props;
 
-  const [currentSchool, setCurrentSchool] = useState(schoolObj);
+  const [currentSchool, setCurrentSchool] = useState(school);
 
   // Update education state, so that it's immediate and not one step behind
   useEffect(() => {
@@ -17,6 +15,7 @@ function Education(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setCurrentSchool((prev) => ({ ...prev, [name]: value }));
   };
 

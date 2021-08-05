@@ -1,8 +1,8 @@
 import React from 'react';
-import uniqid from 'uniqid';
 import General from '../generalInfo/General';
 import Work from '../work/Work';
 import Education from '../education/Education';
+import { schoolObj } from '../../../boiler';
 
 function Form(props) {
   const { setGeneral, setWork, education, setEducation } = props;
@@ -10,6 +10,7 @@ function Form(props) {
   const ed = education.map((item) => (
     // console.log(item);
     <Education
+      key={item.id}
       setEducation={setEducation}
       school={item}
       education={education}
@@ -18,12 +19,12 @@ function Form(props) {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    setEducation((prev) => [...prev, { id: uniqid() }]);
+    setEducation((prev) => [...prev, schoolObj()]);
   };
 
   return (
     <div>
-      <p>Here be form</p>
+      <h2>Fill in your resume here:</h2>
       <General setGeneral={setGeneral} />
       <Work setWork={setWork} />
       <div>
