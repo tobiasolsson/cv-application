@@ -1,3 +1,25 @@
 .education {
   margin-top: 20px;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  width: 574px;
+  margin: 0 auto;
+  padding: 6px;
+  background-color: #514b4b;
+  color: #eceaea;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title {
+  margin: 0 auto;
+  margin-top: 20px;
+}

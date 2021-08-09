@@ -7,6 +7,9 @@ import { schoolObj, workObj, generalObj } from './boiler';
 import styles from './App.module.css';
 
 // TODO: fixa CSS
+// TODO: Lägg till header och footer med text/länkar för att fylla ut topp och botten
+// TODO: Flytta preview till botten när skärmen minskar
+// TODO: Fina till mobile css
 
 function App() {
   const [general, setGeneral] = useState(generalObj);

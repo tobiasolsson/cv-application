@@ -62,7 +62,7 @@ function Work(props) {
         className={styles.input}
         onChange={handleChange}
       />
-      <button type="button" onClick={handleDelete}>
+      <button type="button" className={styles.remove} onClick={handleDelete}>
         Remove
       </button>
     </form>

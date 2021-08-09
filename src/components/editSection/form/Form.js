@@ -33,20 +33,24 @@ function Form(props) {
   };
 
   return (
-    <div>
-      <h2>Fill in your resume here:</h2>
+    <div className={styles.main}>
+      <h2 className={styles.title}>Fill in your resume here:</h2>
       <General setGeneral={setGeneral} />
-      <div>
-        <h3>Arbetserfarenhet: </h3>
+      <div className={styles.main}>
+        <h3 className={styles.title}>Arbetserfarenhet: </h3>
         {wk}
-        <button type="submit" onClick={handleAddWork}>
+        <button type="submit" className={styles.add} onClick={handleAddWork}>
           Add
         </button>
       </div>
-      <div className={styles.education}>
-        <h3>Utbildning:</h3>
+      <div className={styles.main}>
+        <h3 className={styles.title}>Utbildning:</h3>
         {ed}
-        <button type="submit" onClick={handleAddEducation}>
+        <button
+          type="submit"
+          className={styles.add}
+          onClick={handleAddEducation}
+        >
           Add
         </button>
       </div>
