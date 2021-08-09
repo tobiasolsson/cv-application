@@ -33,7 +33,7 @@ function General(props) {
       />
 
       <input
-        type="text"
+        type="email"
         name="email"
         placeholder="E-post"
         className={styles.input}
@@ -41,9 +41,10 @@ function General(props) {
       />
 
       <input
-        type="text"
+        type="tel"
         name="phone"
         placeholder="Telefon nummer"
+        pattern="[0-9]{4} [0-9]{2} [0-9]{2} [0-9]{2}"
         className={styles.input}
         onChange={handleChange}
       />

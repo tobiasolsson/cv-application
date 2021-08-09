@@ -10,7 +10,7 @@ import styles from './App.module.css';
 
 function App() {
   const [general, setGeneral] = useState(generalObj);
-  const [work, setWork] = useState(workObj);
+  const [work, setWork] = useState([workObj()]);
   const [education, setEducation] = useState([schoolObj()]);
 
   return (
@@ -20,6 +20,7 @@ function App() {
         <Form
           setGeneral={setGeneral}
           setWork={setWork}
+          work={work}
           setEducation={setEducation}
           education={education}
         />

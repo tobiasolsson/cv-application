@@ -7,16 +7,19 @@ import { schoolObj } from '../../../boiler';
 import styles from './Form.module.css';
 
 function Form(props) {
-  const { setGeneral, setWork, education, setEducation } = props;
+  const { setGeneral, setWork, work, education, setEducation } = props;
 
   const ed = education.map((item) => (
-    // console.log(item);
     <Education
       key={item.id}
       setEducation={setEducation}
       school={item}
       education={education}
     />
+  ));
+
+  const wk = work.map((item) => (
+    <Work key={item.id} setWork={setWork} job={item} work={work} />
   ));
 
   const handleAdd = (e) => {
@@ -28,7 +31,10 @@ function Form(props) {
     <div>
       <h2>Fill in your resume here:</h2>
       <General setGeneral={setGeneral} />
-      <Work setWork={setWork} />
+      <div>
+        <h3>Arbetserfarenhet: </h3>
+        {wk}
+      </div>
       <div className={styles.education}>
         <h3>Utbildning:</h3>
         {ed}

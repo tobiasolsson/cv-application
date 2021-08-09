@@ -10,11 +10,11 @@ const school = {
 };
 
 const work = {
+  company: '',
+  title: '',
   yearStart: 0,
   yearEnd: 0,
-  company: '',
   desc: '',
-  title: '',
   id: '',
 };
 
