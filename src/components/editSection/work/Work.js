@@ -6,10 +6,15 @@ function Work(props) {
 
   const [currentWork, setCurrentWork] = useState(job);
 
-  // Update education state, so that it's immediate and not one step behind
+  // Update state, so that it's immediate and not one step behind
   useEffect(() => {
-    const updatedworkList = work.filter((item) => job.id !== item.id);
-    setWork([...updatedworkList, currentWork]);
+    const updatedworkList = work.map((item) => {
+      if (job.id === item.id) {
+        return currentWork;
+      }
+      return item;
+    });
+    setWork([...updatedworkList]);
   }, [currentWork]);
 
   const handleChange = (e) => {

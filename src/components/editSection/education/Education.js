@@ -6,12 +6,15 @@ function Education(props) {
 
   const [currentSchool, setCurrentSchool] = useState(school);
 
-  // Update education state, so that it's immediate and not one step behind
+  // Update state, so that it's immediate and not one step behind
   useEffect(() => {
-    const updatedEducationList = education.filter(
-      (item) => school.id !== item.id,
-    );
-    setEducation([...updatedEducationList, currentSchool]);
+    const updatedEducationList = education.map((item) => {
+      if (school.id === item.id) {
+        return currentSchool;
+      }
+      return item;
+    });
+    setEducation([...updatedEducationList]);
   }, [currentSchool]);
 
   const handleChange = (e) => {
