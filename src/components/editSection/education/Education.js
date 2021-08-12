@@ -38,6 +38,7 @@ function Education(props) {
         type="text"
         name="school"
         placeholder="Skola"
+        value={school.school}
         className={styles.input}
         onChange={handleChange}
       />
@@ -45,6 +46,7 @@ function Education(props) {
         type="text"
         name="title"
         placeholder="Program"
+        value={school.title}
         className={styles.input}
         onChange={handleChange}
       />
@@ -52,6 +54,7 @@ function Education(props) {
         type="text"
         name="yearStart"
         placeholder="Från"
+        value={school.yearStart}
         className={styles.input}
         onChange={handleChange}
       />
@@ -59,6 +62,7 @@ function Education(props) {
         type="text"
         name="yearEnd"
         placeholder="Till"
+        value={school.yearEnd}
         className={styles.input}
         onChange={handleChange}
       />
@@ -66,6 +70,7 @@ function Education(props) {
         type="text"
         name="desc"
         placeholder="Beskrivning"
+        value={school.desc}
         className={styles.input}
         onChange={handleChange}
       />

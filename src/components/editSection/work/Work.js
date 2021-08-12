@@ -36,6 +36,7 @@ function Work(props) {
         type="text"
         name="company"
         placeholder="Arbetsgivare"
+        value={job.company}
         className={styles.input}
         onChange={handleChange}
       />
@@ -43,6 +44,7 @@ function Work(props) {
         type="text"
         name="title"
         placeholder="Jobbtitel"
+        value={job.title}
         className={styles.input}
         onChange={handleChange}
       />
@@ -50,6 +52,7 @@ function Work(props) {
         type="text"
         name="yearStart"
         placeholder="Från"
+        value={job.yearStart}
         className={styles.input}
         onChange={handleChange}
       />
@@ -57,6 +60,7 @@ function Work(props) {
         type="text"
         name="yearEnd"
         placeholder="Till"
+        value={job.yearEnd}
         className={styles.input}
         onChange={handleChange}
       />
@@ -64,6 +68,7 @@ function Work(props) {
         type="text"
         name="desc"
         placeholder="Beskrivning"
+        value={job.desc}
         className={styles.input}
         onChange={handleChange}
       />

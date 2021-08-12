@@ -7,7 +7,7 @@ import { schoolObj, workObj } from '../../../boiler';
 import styles from './Form.module.css';
 
 function Form(props) {
-  const { setGeneral, setWork, work, education, setEducation } = props;
+  const { general, setGeneral, setWork, work, education, setEducation } = props;
 
   const ed = education.map((item) => (
     <Education
@@ -35,7 +35,7 @@ function Form(props) {
   return (
     <div className={styles.main}>
       <h2 className={styles.title}>Fill in your resume here:</h2>
-      <General setGeneral={setGeneral} />
+      <General general={general} setGeneral={setGeneral} />
       <div className={styles.main}>
         <h3 className={styles.title}>Arbetserfarenhet: </h3>
         {wk}
