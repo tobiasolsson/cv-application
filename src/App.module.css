@@ -34,3 +34,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1450px) {
+  .content {
+    display: block;
+  }
+  .main {
+    width: 100%;
+  }
+}
