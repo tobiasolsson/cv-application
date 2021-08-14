@@ -6,7 +6,6 @@ import { schoolObj, workObj, generalObj } from './boiler';
 
 import styles from './App.module.css';
 
-// TODO: fixa CSS
 // TODO: Lägg till header och footer med text/länkar för att fylla ut topp och botten
 // TODO: Flytta preview till botten när skärmen minskar
 // TODO: Fina till mobile css
@@ -19,7 +18,9 @@ function App() {
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.title}>CV Application</h1>
+      <header>
+        <h1 className={styles.title}>CV Application</h1>
+      </header>
       <div className={styles.content}>
         <Form
           general={general}
@@ -31,6 +32,15 @@ function App() {
         />
         <Cv general={general} work={work} education={education} />
       </div>
+      <footer>
+        <a
+          href="https://github.com/tobiasolsson/cv-application"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+      </footer>
     </div>
   );
 }

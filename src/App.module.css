@@ -16,3 +16,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+header {
+  padding: 10px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #1d1c1c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
