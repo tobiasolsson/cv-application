@@ -1,0 +1,41 @@
+.presentation {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d1c1c;
+
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header . .'
+    'header header . contact'
+    'desc desc desc desc';
+}
+
+.header {
+  grid-area: header;
+}
+
+.contact {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: end;
+  grid-area: contact;
+}
+
+.desc {
+  border-top: 4px solid hsl(192, 69%, 52%);
+  grid-area: desc;
+}
+
+.name {
+  color: hsl(192, 69%, 36%);
+  font-size: 38px;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}

@@ -1,0 +1,32 @@
+.job {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'title title company year'
+    'desc desc desc desc';
+
+  list-style: none;
+  padding: 0;
+}
+
+.title {
+  grid-area: title;
+  font-weight: 600;
+}
+
+.company {
+  grid-area: company;
+  border-right: 1px solid black;
+  font-weight: 100;
+}
+
+.year {
+  grid-area: year;
+  margin-left: 10px;
+}
+
+.desc {
+  grid-area: desc;
+}

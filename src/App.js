@@ -10,6 +10,7 @@ import styles from './App.module.css';
 // TODO: Lägg till header och footer med text/länkar för att fylla ut topp och botten
 // TODO: Flytta preview till botten när skärmen minskar
 // TODO: Fina till mobile css
+// TODO: Textarea på description inputs
 
 function App() {
   const [general, setGeneral] = useState(generalObj);
@@ -21,6 +22,7 @@ function App() {
       <h1 className={styles.title}>CV Application</h1>
       <div className={styles.content}>
         <Form
+          general={general}
           setGeneral={setGeneral}
           setWork={setWork}
           work={work}

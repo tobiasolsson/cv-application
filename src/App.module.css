@@ -1,14 +1,15 @@
 .main {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
   width: 80%;
-  background-color: #80acba;
+  background-color: #fafafa;
   border-radius: 14px;
 }
 
 .title {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: #f2f5ee;
+  color: #1d1c1c;
 }
 
 .content {

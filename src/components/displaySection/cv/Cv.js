@@ -1,38 +1,31 @@
 import React from 'react';
 
+import Presentation from '../presentation/Presentation';
+import Work from '../work/Work';
+import School from '../school/School';
+
+import styles from './Cv.module.css';
+
 function Cv(props) {
   const { general, education, work } = props;
 
-  const renderGeneral = Object.keys(general).map((key) => (
-    <p>{general[key]}</p>
+  const renderEudcation = education.map((item) => (
+    <School key={item.id} school={item} />
   ));
-
-  const renderEudcation = education.map((item) => {
-    const noIdItem = Object.keys(item).filter((key) => key !== 'id');
-    const ed = noIdItem.map((key) => (
-      <li>
-        {key} - {item[key]}
-      </li>
-    ));
-    return <ul>{ed}</ul>;
-  });
-
-  const renderWork = work.map((item) => {
-    const noIdItem = Object.keys(item).filter((key) => key !== 'id');
-    const wk = noIdItem.map((key) => (
-      <li>
-        {key} - {item[key]}
-      </li>
-    ));
-    return <ul>{wk}</ul>;
-  });
+  const renderWork = work.map((item) => <Work key={item.id} work={item} />);
 
   return (
     <div>
-      <p>Here be preview</p>
-      <div>{renderGeneral}</div>
-      <div>{renderWork}</div>
-      <div>{renderEudcation}</div>
+      <div className={styles.general}>
+        <Presentation general={general} />
+      </div>
+      <div>
+        <h3 className={styles.category}>Arbetserfarenhet</h3>
+        {renderWork}
+      </div>
+      <div>
+        <h3 className={styles.category}>Utbildning</h3> {renderEudcation}
+      </div>
     </div>
   );
 }
