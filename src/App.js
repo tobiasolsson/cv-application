@@ -6,7 +6,6 @@ import { schoolObj, workObj, generalObj } from './boiler';
 
 import styles from './App.module.css';
 
-// TODO: Fixa swenglish
 // TODO: Textarea på description inputs
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
   return (
     <div className={styles.main}>
       <header>
-        <h1 className={styles.title}>CV Application</h1>
+        <h1 className={styles.title}>CV Applikation</h1>
       </header>
       <div className={styles.content}>
         <Form

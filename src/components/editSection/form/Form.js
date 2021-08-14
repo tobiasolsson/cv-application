@@ -34,13 +34,13 @@ function Form(props) {
 
   return (
     <div className={styles.main}>
-      <h2 className={styles.title}>Fill in your resume here:</h2>
+      <h2 className={styles.title}>Fyll i din information här:</h2>
       <General general={general} setGeneral={setGeneral} />
       <div className={styles.main}>
         <h3 className={styles.title}>Arbetserfarenhet: </h3>
         {wk}
         <button type="submit" className={styles.add} onClick={handleAddWork}>
-          Add
+          Lägg till
         </button>
       </div>
       <div className={styles.main}>
@@ -51,7 +51,7 @@ function Form(props) {
           className={styles.add}
           onClick={handleAddEducation}
         >
-          Add
+          Lägg till
         </button>
       </div>
     </div>

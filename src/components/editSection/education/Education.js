@@ -75,7 +75,7 @@ function Education(props) {
         onChange={handleChange}
       />
       <button type="button" className={styles.remove} onClick={handleDelete}>
-        Remove
+        Ta bort
       </button>
     </form>
   );
